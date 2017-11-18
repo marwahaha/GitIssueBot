@@ -1,0 +1,38 @@
+blacklisted_targets:
+- master
+dryrun: true
+problems:
+  blacklisted_target: '  * Your PR''s target branch `{target_branch}` is among the
+    blacklisted target branches: {blacklisted_targets}'
+  empty_body: '  * Your PR does have an empty description. Please explain what your
+    PR does, how you''ve tested it, etc.'
+  invalid_title: '  * Your PR does has an invalid title. Please update it to start
+    with one of [bugfix], [feature], [critical], [new locale], [misc], [tests], or
+    [pkg].'
+reminder: 'Hi @{author},
+
+
+  Thank you for your contribution! Sadly it looks like there is something wrong with
+  this PR from branch `{source_branch}` on repository `{source_repo}` to branch `{target_branch}`
+  on repository `{target_repo}`:
+
+
+  {problems}
+
+
+  Please take a look at the [section on PRs in the Contribution Guidelines](https://github.com/moment/moment/blob/develop/CONTRIBUTING.md)
+  and make sure that your PR follows them. Thank you!
+
+
+  Best regards,
+
+  ~ Your friendly GitIssueBot
+
+
+  PS: I''m just an automated script, not a human being.
+
+  '
+repo: marwahaha/moment
+since: 2010-11-18 21:58:24.354836+00:00
+title_regex: '\[bugfix\] |\[feature\] |\[critical\] |\[new locale\] |\[misc\] |\[tests\] |\[pkg\] '
+token: <make a token>
